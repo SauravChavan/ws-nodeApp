@@ -1,0 +1,30 @@
+Ability to customize duration and start time of slot while booking [DONE]
+-------[Public Booking System]---------
+Public book slot page
+    => Can have multiple public URLs
+    => Ability to CRUD from profile page
+Public slot approval mechanism to admin and chair wise employee
+Mechanism to send Notification to admin and Employees for booking
+-------[/Public Booking System]---------
+
+-------[Company Customizations]---------
+Shop closing and opening timeDefault duration = 45 minFuture bookings allowed till what extent eg only 1 wee kin future we be booked
+break time/not available time
+Number of chairs &/ chair no / Person name &/ Person name
+Who can confirm the slot booked via public page
+-------[/Company Customizations]---------
+
+-------[Business Marketing Platform]---------
+Page to show list of services offered
+Marketing and offers page
+Home vist booking page
+Safety regulation taken care of banner types
+Business Marketing Platform
+-------[/Business Marketing Platform]---------
+
+-------[Customer Management System]---------
+Admin => search customer => name contact number and last visit date
+SuperAdmin => Filter by Company, Booking info, search, history etc
+-------[/Customer Management System]---------
+
+************Dynamic forms for book slot************
