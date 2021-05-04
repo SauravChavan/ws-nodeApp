@@ -1,8 +1,10 @@
 const mongoose = require('mongoose');
 const config = require('./config');
 const userSeeder = require('./seeders/userSeeder');
+const cabSeeder = require('./seeders/cabSeeder');
 
 const mongoURL = process.env.DB || 'mongodb://localhost:27017/ws';
+console.log("Connected to:", mongoURL)
 
 /**
  * Seeders List
@@ -11,7 +13,8 @@ const mongoURL = process.env.DB || 'mongodb://localhost:27017/ws';
  */
 module.exports = {
     seedersList: {
-        userSeeder
+        userSeeder,
+        cabSeeder
     },
     connect: async () =>
         await mongoose.connect(mongoURL, { useNewUrlParser: true }),

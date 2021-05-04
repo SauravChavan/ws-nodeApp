@@ -9,7 +9,9 @@ router.post("/signup", async (req, res) => {
     }
     return res.status(200).json({
         message: "OK",
-        user: result.user,
+        firstName: result.user.firstName,
+        lastName: result.user.lastName,
+        email: result.user.email,
     });
 });
 

@@ -15,7 +15,10 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "google-search-results-nodejs": "^2.0.1",
     "mongoose": "^5.12.7",
+    "mongoose-data-seed": "^2.1.6",
+    "node-geocoder": "^3.27.0",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
     "react": "^17.0.1",
@@ -31,5 +34,8 @@
     "start": "node index.js"
   },
   "author": "Saurav Chavan <saurav.21810942@viit.ac.in>",
-  "license": "ISC"
+  "license": "ISC",
+  "mdSeed": {
+    "seedersFolder": "./seeders"
+  }
 }
