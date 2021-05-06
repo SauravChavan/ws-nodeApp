@@ -8,7 +8,12 @@ const cab = new schema(
             type: String,
             required: true
         },
-        place: String,
+        number: {
+            type: String,
+            requied: true,
+            unique: true
+        },
+        cabLocation: String,
         latitude: Number,
         longitude: Number,
         available: {

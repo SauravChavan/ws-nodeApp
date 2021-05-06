@@ -1,7 +1,4 @@
 const Cab = require("../models/cab");
-const bcrypt = require("bcrypt-nodejs");
-const jwt = require("jsonwebtoken");
-const config = require("../config");
 
 const getAllCabs = async () => {
     try {
@@ -16,15 +13,16 @@ const getAllCabs = async () => {
 
 const addCab = async (data) => {
     try {
-        let {driver, place, latitude, longitude, available} = data
+        let {driver, number, place, latitude, longitude, available} = data
         if (!driver) {
             return {
                 err: true,
-                message: "Driver name necessary"
+                message: "Driver name AND cab number necessary"
             }
         }
         let cab = new Cab({
             driver: driver,
+            number: number,
             place: place,
             latitude: latitude,
             longitude: longitude,
@@ -38,19 +36,7 @@ const addCab = async (data) => {
     }
 }
 
-const updateCabLocation = async (data) => {
-    try {
-        let {cabId, place, longitude, latitude, available} = data
-        let cab = await Cab.findByIdAndUpdate(cabId, {place: place, longitude: longitude, latitude: latitude, available: available});
-        return cab;
-    } catch (ex) {
-        console.log(ex);
-        throw ex;
-    }
-}
-
-
 module.exports = {
-    getAllCabs, addCab, updateCabLocation
+    getAllCabs, addCab,
 }
 

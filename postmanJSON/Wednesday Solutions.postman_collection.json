@@ -1,0 +1,289 @@
+{
+	"info": {
+		"_postman_id": "4efba5b0-8cef-4d22-878a-acff21765514",
+		"name": "Wednesday Solutions",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "WS - Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Saurav\",\r\n    \"lastName\": \"Chavan\",\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\" : \"Saurav@12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/user/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"user",
+						"signup"
+					]
+				},
+				"description": "Signup"
+			},
+			"response": []
+		},
+		{
+			"name": "WS - ADMIN Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"Saurav@12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				},
+				"description": "Login"
+			},
+			"response": []
+		},
+		{
+			"name": "WS - USER Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"Saurav@12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				},
+				"description": "Login"
+			},
+			"response": []
+		},
+		{
+			"name": "Check nearby cabs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkbWluQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6IlNhdXJhdiIsImxhc3ROYW1lIjoiQ2hhdmFuIiwiaWF0IjoxNjIwMDQ1Njk2fQ.9xN5ZFMbsSnkwAlgLqwgkyJB4c_9xKou-4LzZBBXGYI"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"locationA\": \"Bibwewadi Pune\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/booking/checkCabs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"booking",
+						"checkCabs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all past bookings",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkbWluQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6IlNhdXJhdiIsImxhc3ROYW1lIjoiQ2hhdmFuIiwiaWF0IjoxNjIwMzA1Nzk3fQ.73pXW2ee70ewiCV1UyXMcXqnKEDPBkLagfC2PBoS_sU"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/booking/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"booking",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create booking",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVzZXIxQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6InVzZXIxIiwibGFzdE5hbWUiOiJ1c2VyMSIsImlhdCI6MTYyMDMwNjYwNH0.NEi7mzbo-TrMvHJG8J1SR1M0im3acPXA_v8GYVzZ6hQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"locationA\": \"Vishrantwadi Pune\",\r\n    \"locationB\": \"Pune Station\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/booking/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"booking",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create cabs (for admin)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkbWluQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6IlNhdXJhdiIsImxhc3ROYW1lIjoiQ2hhdmFuIiwiaWF0IjoxNjIwMDQ1Njk2fQ.9xN5ZFMbsSnkwAlgLqwgkyJB4c_9xKou-4LzZBBXGYI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"driver\": \"W\",\r\n    \"place\": \"Wagholi\", \r\n    \"number\": \"MH12 A13\",\r\n    \"latitude\": 18.5808, \r\n    \"longitude\": 73.9787,\r\n    \"available\": true\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/cab",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"cab"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all cabs (for admin)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkbWluQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6IlNhdXJhdiIsImxhc3ROYW1lIjoiQ2hhdmFuIiwiaWF0IjoxNjIwMDQ1Njk2fQ.9xN5ZFMbsSnkwAlgLqwgkyJB4c_9xKou-4LzZBBXGYI"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/cab",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"cab"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
