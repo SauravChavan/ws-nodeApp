@@ -38,9 +38,10 @@ const addCab = async (data) => {
     }
 }
 
-const updateCabLocation = async (cabId, newLocation) => {
+const updateCabLocation = async (data) => {
     try {
-        let cab = await Cab.findByIdAndUpdate(cabId, newLocation);
+        let {cabId, place, longitude, latitude, available} = data
+        let cab = await Cab.findByIdAndUpdate(cabId, {place: place, longitude: longitude, latitude: latitude, available: available});
         return cab;
     } catch (ex) {
         console.log(ex);

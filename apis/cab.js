@@ -5,7 +5,7 @@ const cabServices = require("../services/cabServices")
 
 router.get("/", passport.authenticate('jwt'), async (req, res) => {
     try {
-        if (req.user) {
+        if (req.user.isAdmin) {
                 let customers = await cabServices.getAllCabs();
                 res.status(200).json({ customers: customers })
         } else {

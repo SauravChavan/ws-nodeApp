@@ -3,16 +3,24 @@ const User = require("../models/user");
 // const moment = require('moment');
 
 
-const getAllBookings = async (id) => {
+const getAllBookings = async (user) => {
     try {
         let bookings;
-        bookings = await Booking.find({createdBy: id})
-        return bookings;
+        if (user.Admin) {
+            //admin
+            bookings = await Booking.find()
+            return bookings;
+        } else {
+            //Customers
+            bookings = await Booking.find({ createdBy: user._id })
+            return bookings;
+        }
     } catch (ex) {
         console.log(ex);
         // res.status(400).json(ex);
     }
 }
+
 const createBooking = async (data) => {
     try {
         if (data.user) {

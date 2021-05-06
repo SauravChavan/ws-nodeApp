@@ -11,7 +11,7 @@ const options = {
 };
 const geocoder = NodeGeocoder(options);
 
-//TODO: addCab, updateCab, createBooking, getAllBooking
+//TODO: addCab, updateCab, createBooking, getAllBooking for admin and user
 
 function distCalc(long1, lat1, long2, lat2){
     const R = 6371e3; // metres
@@ -24,10 +24,10 @@ function distCalc(long1, lat1, long2, lat2){
     return d
 }
  
-router.get("/:userId", passport.authenticate('jwt'), async (req, res) => {
+router.get("/", passport.authenticate('jwt'), async (req, res) => {
     try {
         if (req.user) {
-            let bookings = await bookingService.getAllBookings(req.params.userId);
+            let bookings = await bookingService.getAllBookings(req.user);
             res.status(200).json({ bookings: bookings });
         } else {
             throw {
@@ -43,9 +43,9 @@ router.get("/:userId", passport.authenticate('jwt'), async (req, res) => {
 router.post("/checkCabs", passport.authenticate('jwt'), async (req, res) => {
     try {
         if (req.user) {
-            let {pickUp, dropHere} = req.body
-            const p = await geocoder.geocode({address: pickUp, countryCode: "IN", limit: 1});
-            const d = await geocoder.geocode({address: dropHere, countryCode: "IN", limit: 1});
+            let {locationA, locationB} = req.body
+            const p = await geocoder.geocode({address: locationA, countryCode: "IN", limit: 1});
+            const d = await geocoder.geocode({address: locationB, countryCode: "IN", limit: 1});
             var travelDist = distCalc(p[0].longitude, p[0].latitude, d[0].longitude, d[0].latitude)
             availableCabs = []
             let allCabs = await cabServices.getAllCabs();
@@ -72,12 +72,17 @@ router.post("/checkCabs", passport.authenticate('jwt'), async (req, res) => {
     }
 });
 
-router.post("/create", passport.authenticate('jwt'), async (req, res) => {
+router.post("/create/", passport.authenticate('jwt'), async (req, res) => {
     try {
         if (req.user) {
-            var {driver} = req.body
+            var {driver, locationA, locationB} = req.body
             let booking = await bookingService.createBooking(driver);
-            res.status(200).json({ success: true, booking: booking, message: "Booking created successfully!" });
+            if(booking && booking.err){
+                return (
+                    res.status(400).json({success: false, error: booking.message})
+                )
+            }
+            res.status(200).json({ success: true, booking: booking, message: "Cab booked successfully!" });
         } else {
             throw {
                 message: "Not logged In!"

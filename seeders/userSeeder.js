@@ -7,6 +7,12 @@ const data = [{
     email: "admin@gmail.com",
     password: "Saurav@12345",
     isAdmin: true
+},{
+  firstName: "user1",
+  lastName: "user1",
+  email: "user1@gmail.com",
+  password: "user1@12345",
+  isAdmin: false
 }];
 
 class UsersSeeder extends Seeder {

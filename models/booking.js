@@ -4,11 +4,15 @@ const schema = mongoose.Schema;
 //Save the information about appointment bookings
 const booking = new schema(
     {
-        pickUp: {
+        customerName: {
+            type: String,
+            require: true
+        },
+        LocationA: {
             type: Object,
             required: true
         },
-        dropHere: {
+        locationB: {
             type: Object,
             required: true
         },
