@@ -28,9 +28,9 @@ router.get("/", passport.authenticate('jwt'), async (req, res) => {
 router.get("/checkCabs", passport.authenticate('jwt'), async(req, res) => {
     try {
             if(req.user){
-                let {locationA} = req.body
-                const check = true
-                let availableCabs = await bookingService.checkCabs(locationA, check)
+                let {locationA, within} = req.body
+                const create = false
+                let availableCabs = await bookingService.checkCabs(locationA, create, within)
                 if(availableCabs.length === 0){
                     return (res.json({message: "Sorry for inconvenience, no cabs available within 5 km"}))
                 }
