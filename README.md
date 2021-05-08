@@ -22,3 +22,4 @@ Brownie points for
 Above repository is a solution the given task.
 
 ### Test
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/19027760f41017680cb0)
