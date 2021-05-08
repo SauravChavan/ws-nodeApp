@@ -8,10 +8,10 @@ router.post("/signup", async (req, res) => {
         return res.status(400).json({message: result.message});
     }
     return res.status(200).json({
-        message: "OK",
-        firstName: result.user.firstName,
-        lastName: result.user.lastName,
-        email: result.user.email,
+        message: "User created successfully, please login to create bookings.",
+        firstName: result.firstName,
+        lastName: result.lastName,
+        email: result.email,
     });
 });
 

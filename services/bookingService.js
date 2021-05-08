@@ -93,6 +93,7 @@ const createBooking = async(user, locationA, locationB) => {
             travelDist = distCalc(p[0].longitude, p[0].latitude, d[0].longitude, d[0].latitude)
             let booking = new Booking({
                 date: Date.now(),
+                passenger: user.email,
                 driver: bookedCab.driver,
                 cabNumber: bookedCab.number,
                 locationA: locationA,

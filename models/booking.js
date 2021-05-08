@@ -5,6 +5,7 @@ const schema = mongoose.Schema;
 const booking = new schema(
     {
         date: Date,
+        passenger: String,
         driver: {
             type: String,
             required: true

@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"firstName\": \"Saurav\",\r\n    \"lastName\": \"Chavan\",\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\" : \"Saurav@12345\"\r\n}",
+					"raw": "{\r\n    \"firstName\": \"user2\",\r\n    \"lastName\": \"user2\",\r\n    \"email\": \"user2@gmail.com\",\r\n    \"password\" : \"user2@12345\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -74,7 +74,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"Saurav@12345\"\r\n}",
+					"raw": "{\r\n    \"email\": \"user1@gmail.com\",\r\n    \"password\": \"user1@12345\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -109,12 +109,12 @@
 					{
 						"key": "Authorization",
 						"type": "text",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkbWluQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6IlNhdXJhdiIsImxhc3ROYW1lIjoiQ2hhdmFuIiwiaWF0IjoxNjIwMDQ1Njk2fQ.9xN5ZFMbsSnkwAlgLqwgkyJB4c_9xKou-4LzZBBXGYI"
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVzZXIyQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6InVzZXIyIiwibGFzdE5hbWUiOiJ1c2VyMiIsImlhdCI6MTYyMDMwNDkxNX0.IfD_AIULStKZa8bDRxvPxnj11am11zdhY33X0INLUmI"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"locationA\": \"Bibwewadi Pune\"\r\n}",
+					"raw": "{\r\n    \"locationA\": \"Vishrantwadi Pune\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -148,7 +148,46 @@
 					{
 						"key": "Authorization",
 						"type": "text",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkbWluQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6IlNhdXJhdiIsImxhc3ROYW1lIjoiQ2hhdmFuIiwiaWF0IjoxNjIwMzA1Nzk3fQ.73pXW2ee70ewiCV1UyXMcXqnKEDPBkLagfC2PBoS_sU"
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVzZXIxQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6InVzZXIxIiwibGFzdE5hbWUiOiJ1c2VyMSIsImlhdCI6MTYyMDMwNjYwNH0.NEi7mzbo-TrMvHJG8J1SR1M0im3acPXA_v8GYVzZ6hQ"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/booking/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"booking",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all users bookings - ADMIN",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVzZXIxQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6InVzZXIxIiwibGFzdE5hbWUiOiJ1c2VyMSIsImlhdCI6MTYyMDMwNjYwNH0.NEi7mzbo-TrMvHJG8J1SR1M0im3acPXA_v8GYVzZ6hQ"
 					}
 				],
 				"body": {
@@ -189,7 +228,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"locationA\": \"Vishrantwadi Pune\",\r\n    \"locationB\": \"Pune Station\"\r\n}",
+					"raw": "{\r\n    \"locationA\": \"Khadki Pune\",\r\n    \"locationB\": \"Pune Station\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
